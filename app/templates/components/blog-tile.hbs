@@ -1,6 +1,6 @@
 <ul class="list-group">
   {{#each blogs as |blog index|}}
-    {{#if (ifCond index "100") }}
+    {{#if (ifCond index "3") }}
       <li class="list-group-item">
         {{#link-to 'blog' blog.id}}
         <div class="post">

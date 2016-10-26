@@ -3,6 +3,7 @@
     <h2>Posts:</h2>
   </div>
 {{blog-tile blogs=model.blogs}}
+{{new-comment}}
 <ul>
 {{#each model.comments as |comment|}}
   <li>{{comment.author}}</li>
