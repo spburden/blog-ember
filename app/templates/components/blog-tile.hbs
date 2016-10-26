@@ -1,9 +1,11 @@
-<div class="well">
+{{#link-to 'blog' blog.id}}
+<div class="post">
   <h3>{{blog.title}}</h3>
   <div class="img-center">
     <img src={{blog.image}}>
   </div>
-  <p>By {{blog.author}}</p>
+  <p>By: {{blog.author}}</p>
   <p>{{summary blog.body}}</p>
   <p>{{blog.date}}</p>
 </div>
+{{/link-to}}

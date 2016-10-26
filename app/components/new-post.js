@@ -1,0 +1,26 @@
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+  addNewPost: false,
+  actions: {
+    blogFormShow() {
+      this.set('addNewPost', true);
+    },
+
+    blogFormHide() {
+      this.set('addNewPost', false);
+    },
+
+    saveEntry1() {
+      var params = {
+        title: this.get('title'),
+        body: this.get('body'),
+        author: this.get('author'),
+        image: this.get('image'),
+        date: this.get('date'),
+      };
+      this.set('addNewPost', false);
+      this.sendAction('saveEntry2', params);
+    }
+  }
+});
