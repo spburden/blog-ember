@@ -2,10 +2,10 @@
   <div class="panel-heading">
     <h2>Posts:</h2>
   </div>
-
-  <ul class="list-group">
-    {{#each model as |blog|}}
-        <li class="list-group-item">{{blog-tile blog=blog}}</li>
-    {{/each}}
-  </ul>
+{{blog-tile blogs=model.blogs}}
+<ul>
+{{#each model.comments as |comment|}}
+  <li>{{comment.author}}</li>
+{{/each}}
+</ul>
 </div>

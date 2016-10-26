@@ -17,7 +17,7 @@ export default Ember.Component.extend({
         body: this.get('body'),
         author: this.get('author'),
         image: this.get('image'),
-        date: this.get('date'),
+        date: moment().format("LL LTS"),
       };
       this.set('addNewPost', false);
       this.sendAction('saveEntry2', params);

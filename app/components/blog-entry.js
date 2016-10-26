@@ -14,7 +14,6 @@ export default Ember.Component.extend({
           body: this.get('body'),
           author: this.get('author'),
           image: this.get('image'),
-          date: this.get('date'),
         };
         this.set('updateRentalForm', false);
         this.sendAction('updateEntry', blog, params);

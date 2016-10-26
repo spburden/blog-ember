@@ -1,11 +1,19 @@
-{{#link-to 'blog' blog.id}}
-<div class="post">
-  <h3>{{blog.title}}</h3>
-  <div class="img-center">
-    <img src={{blog.image}}>
-  </div>
-  <p>By: {{blog.author}}</p>
-  <p>{{summary blog.body}}</p>
-  <p>{{blog.date}}</p>
-</div>
-{{/link-to}}
+<ul class="list-group">
+  {{#each blogs as |blog index|}}
+    {{#if (ifCond index "100") }}
+      <li class="list-group-item">
+        {{#link-to 'blog' blog.id}}
+        <div class="post">
+          <h3>{{blog.title}}</h3>
+          <div class="img-center">
+            <img src={{blog.image}}>
+          </div>
+          <p>By: {{blog.author}}</p>
+          <p>{{summary blog.body}}</p>
+          <p>{{moment-from-now blog.date}}</p>
+        </div>
+        {{/link-to}}
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
