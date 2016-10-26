@@ -1,0 +1,20 @@
+body{
+  a{
+    color: #333;
+    text-decoration: none;
+    &:hover{
+      color: #333;
+      text-decoration: none;
+    }
+    .btn-primary {
+      text-decoration-color: white;
+    }
+  }
+  #title{
+    margin-top: 20px;
+    text-align: center;
+  }
+  h2{
+
+  }
+}
