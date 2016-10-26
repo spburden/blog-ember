@@ -11,7 +11,7 @@ export default Ember.Component.extend({
       this.set('addNewPost', false);
     },
 
-    saveEntry1() {
+    saveEntry() {
       var params = {
         title: this.get('title'),
         body: this.get('body'),
@@ -20,7 +20,7 @@ export default Ember.Component.extend({
         date: moment().format("LL LTS"),
       };
       this.set('addNewPost', false);
-      this.sendAction('saveEntry2', params);
+      this.sendAction('saveEntry', params);
     }
   }
 });

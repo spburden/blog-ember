@@ -1,5 +1,16 @@
-{{#if addNewPost}}
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New Post
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
 <h1>New Post</h1>
 <div>
   <form>
@@ -22,11 +33,13 @@
       <label for="image">Image URL</label>
       {{input class="form-control" value=image id="image"}}
     </div>
-    <button class="btn btn-success" {{action 'saveEntry1'}}>Save</button>
-    <button class="btn btn-warning" {{action 'blogFormHide'}}>Cancel</button>
   </form>
 </div>
-
-{{else}}
-<button class="btn btn-danger" {{action 'blogFormShow'}}>New Entry</button>
-{{/if}}
+</div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+       <button type="button" class="btn btn-primary" data-dismiss="modal"{{action 'saveEntry'}}>Save</button>
+     </div>
+   </div>
+ </div>
+</div>

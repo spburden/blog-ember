@@ -58,3 +58,10 @@
     </div>
   </div>
 </div>
+
+<h2> Comments </h2>
+<ul>
+  {{#each blog.comments as |comment|}}
+    <li>{{comment.author1}}</li>
+  {{/each}}
+</ul>

@@ -11,14 +11,15 @@ export default Ember.Component.extend({
       this.set('addNewComment', false);
     },
 
-    saveComment1() {
+    saveComment() {
       var params = {
-        author: this.get('author'),
+        author1: this.get('author1'),
         content: this.get('content'),
-        date: moment().format("LL LTS"),
+        blog: this.get('blog')
       };
+      console.log(this.get('author1'));
       this.set('addNewComment', false);
-      this.sendAction('saveComment2', params);
+      this.sendAction('saveComment', params);
     }
   }
 });

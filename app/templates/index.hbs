@@ -1,12 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
+    {{new-post saveEntry="saveEntry"}}
     <h2>Posts:</h2>
   </div>
-{{blog-tile blogs=model.blogs}}
-{{new-comment}}
-<ul>
-{{#each model.comments as |comment|}}
-  <li>{{comment.author}}</li>
-{{/each}}
-</ul>
+  {{blog-tile blogs=model.blogs}}
 </div>
