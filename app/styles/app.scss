@@ -6,15 +6,21 @@ body{
       color: #333;
       text-decoration: none;
     }
-    .btn-primary {
+    .btn-primary{
       text-decoration-color: white;
     }
   }
-  #title{
+  #title {
     margin-top: 20px;
     text-align: center;
   }
-  h2{
-
+  .well{
+    .img-center{
+      text-align: center;
+      img {
+        width: 40%;
+      }
+    }
   }
+
 }

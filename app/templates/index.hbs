@@ -1,8 +1,5 @@
 <h2>Posts:</h2>
 
-
-<ul>
-  {{#each model as |blog|}}
-     <li>{{blog.author}}</li>
-  {{/each}}
-</ul>
+{{#each model as |blog|}}
+  {{blog-tile blog=blog}}
+{{/each}}
