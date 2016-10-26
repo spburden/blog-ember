@@ -58,10 +58,19 @@
     </div>
   </div>
 </div>
-
-<h2> Comments </h2>
-<ul>
+<br><br><br>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h2> Comments </h2>
+  </div>
   {{#each blog.comments as |comment|}}
-    <li>{{comment.author1}}</li>
+  <div class="panel-body">
+     <li class="list-group-item">
+      <p>{{comment.content}}</p>
+      <p>By: {{comment.author1}}</p>
+      <p>{{moment-from-now comment.date}}</p>
+    </li>
+  </div>
   {{/each}}
-</ul>
+
+</div>
