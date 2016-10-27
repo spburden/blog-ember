@@ -20,7 +20,6 @@ export default Ember.Component.extend({
         date: new Date().getTime(),
         category: "Hipster",
       };
-      console.log(params.title);
       this.set('addNewPost', false);
       this.sendAction('saveEntry', params);
     }
