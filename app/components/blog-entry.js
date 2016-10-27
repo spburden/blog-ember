@@ -23,6 +23,9 @@ export default Ember.Component.extend({
     },
     showEdit() {
       this.set('updatePostForm', true);
+    },
+    saveComment(params){
+      this.sendAction('saveComment', params);
     }
   }
 });

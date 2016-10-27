@@ -7,12 +7,13 @@ function sortByDate(a, b) {
     return (moment(x).isBefore(y)) ? 1 : -1;
 };
 
-
 export function dateSort(params) {
-  var arrOfBlogs = params[0];
-  console.log(arrOfBlogs.content[0]._data.date);
-  arrOfBlogs.content.sort(sortByDate);
-  return arrOfBlogs;
-}
+  if (params[1] === 1) {
+    params[0].content.currentState.sort(sortByDate);
+  }else{
+    params[0].content.sort(sortByDate);
+  }
+  return params[0];
+};
 
 export default Ember.Helper.helper(dateSort);

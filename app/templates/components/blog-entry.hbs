@@ -62,8 +62,9 @@
 <div class="panel panel-info">
   <div class="panel-heading">
     <h2> Comments </h2>
+    {{new-comment saveComment="saveComment" blog=blog}}
   </div>
-  {{#each blog.comments as |comment|}}
+  {{#each (date-sort blog.comments 1) as |comment|}}
   <div class="panel-body">
      <li class="list-group-item">
       <p>{{comment.content}}</p>

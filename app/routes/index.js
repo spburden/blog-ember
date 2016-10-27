@@ -11,6 +11,7 @@ export default Ember.Route.extend({
     saveEntry(params) {
       this.store.createRecord('blog', params).save();
       this.transitionTo('index');
+      window.location.reload(true);
     }
   }
 });
