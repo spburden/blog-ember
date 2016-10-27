@@ -5,7 +5,7 @@
   </div>
   <p>By: {{blog.author}}</p>
   <p>{{blog.body}}</p>
-  <p>{{blog.date}}</p>
+  <p>{{moment-format blog.date}}</p>
   <p>{{moment-from-now blog.date}}</p>
   <button class="btn" {{action 'delete' blog}}>Delete</button>
 </div>
@@ -64,7 +64,7 @@
     <h2> Comments </h2>
     {{new-comment saveComment="saveComment" blog=blog}}
   </div>
-  {{#each (date-sort blog.comments 1) as |comment|}}
+  {{#each blog.comments as |comment|}}
   <div class="panel-body">
      <li class="list-group-item">
       <p>{{comment.content}}</p>

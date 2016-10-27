@@ -1,7 +1,13 @@
+<h1>{{displayedPosts}}</h1>
 <div class="panel panel-default">
   <div class="panel-heading">
     <h2>Posts:</h2>
     {{new-post saveEntry="saveEntry"}}
   </div>
-  {{blog-tile blogs=model.blogs}}
+  <ul class="list-group">
+    {{date-sort model}}
+    {{#each model as |blog index|}}
+        {{blog-tile blog=blog}}
+    {{/each}}
+  </ul>
 </div>

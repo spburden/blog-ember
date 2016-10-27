@@ -15,10 +15,9 @@ export default Ember.Component.extend({
       var params = {
         author1: this.get('author1'),
         content: this.get('content'),
-        date: moment().format("LL LTS"),
+        date: new Date().getTime(),
         blog: this.get('blog')
       };
-      console.log(this.get('author1'));
       this.set('addNewComment', false);
       this.sendAction('saveComment', params);
     }
