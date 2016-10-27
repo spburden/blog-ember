@@ -1,5 +1,5 @@
 <ul class="list-group">
-  {{#each blogs as |blog index|}}
+  {{#each (date-sort blogs) as |blog index|}}
       <li class="list-group-item">
         {{#link-to 'blog' blog.id}}
         <div class="post">
